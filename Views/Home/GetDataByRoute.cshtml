@@ -1,0 +1,36 @@
+﻿@model StudentRouteModel
+@{
+    ViewData["Title"] = "GetDataByRoute";
+}
+
+<h1>GetDataByRoute</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form >
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" id="studentid" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" id="studentname" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" id="studentaddress" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="button" onclick="sendDataUsingFromRoute()" value="Send By Route" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<h3 id="resultgetDataRoute"></h3>
