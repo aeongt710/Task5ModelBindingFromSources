@@ -22,6 +22,7 @@ namespace ModelBinding1.Controllers.ApiController
             return Ok(student);
         }
 
+        //Bind Data Using Query
         [HttpPost]
         [Route("getDataFromQuery")]
         public IActionResult getDataFromQuery([FromQuery] StudentQueryModel student)
@@ -30,6 +31,7 @@ namespace ModelBinding1.Controllers.ApiController
             return Ok(student);
         }
 
+        //Bind Data Using Body
         [HttpPost]
         [Route("getDataFromBody")]
         public IActionResult getDataFromBody([FromBody] StudentBodyModel student)
@@ -37,6 +39,8 @@ namespace ModelBinding1.Controllers.ApiController
 
             return Ok(student);
         }
+
+        //Bind Data Using Form
         [HttpPost]
         [Route("getDataFromForm")]
         public IActionResult getDataFromForm([FromForm] StudentFormModel student)
@@ -44,6 +48,8 @@ namespace ModelBinding1.Controllers.ApiController
 
             return Ok(student);
         }
+
+        //Bind Data Using Route
         [HttpPost]
         [Route("getDataFromRoute/{Id}/{Name}/{Address}")]
         public IActionResult getDataFromRoute([FromRoute] StudentRouteModel student)
